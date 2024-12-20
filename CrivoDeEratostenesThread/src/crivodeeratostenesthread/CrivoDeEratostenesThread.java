@@ -1,13 +1,18 @@
 import java.util.Arrays;
-
-package crivodeeratostenesthread;
+import java.util.Scanner;
 
 
 public class CrivoDeEratostenesThread {
     private static final int NUM_THREADS = 4; // Número de threads
-    private static final int LIMITE_SUPERIOR = 5000; // Limite superior
 
     public static void main(String[] args) throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o limite superior: ");
+        int LIMITE_SUPERIOR = scanner.nextInt();
+        scanner.close();
+        
+        
         boolean[] primos = new boolean[LIMITE_SUPERIOR + 1];
         Arrays.fill(primos, true);
         primos[0] = primos[1] = false;
