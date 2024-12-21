@@ -4,6 +4,7 @@
 
 package com.mycompany.primobuscasequencial;
 import java.util.Arrays;
+
 /*
 Crivo de Eratóstenes
 Autor:
@@ -17,15 +18,25 @@ Descrição:
 public class PrimoBuscaSequencial {
 
     public static void main(String[] args) {
-        int limite = 100; // Limite superior para encontrar primos
+        int limite = 10000000; // Limite superior para encontrar primos
+
+        // Início da contagem do tempo
+        long inicio = System.currentTimeMillis();
+
         boolean[] primos = crivoDeEratostenes(limite);
-        
-        System.out.println("Numeros primos ate " + limite+ ":");
+
+        // Fim da contagem do tempo
+        long fim = System.currentTimeMillis();
+
+        System.out.println("Numeros primos ate " + limite + ":");
         for (int i = 2; i <= limite; i++) {
             if (primos[i]) {
                 System.out.print(i + " ");
             }
         }
+
+        // Exibição do tempo de execução
+        System.out.println("\nTempo de execução: " + (fim - inicio) + " ms");
     }
 
     public static boolean[] crivoDeEratostenes(int n) {
