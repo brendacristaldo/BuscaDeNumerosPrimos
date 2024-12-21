@@ -6,10 +6,16 @@ package com.mycompany.crivodeeratostenesparalela;
 
 import java.util.Arrays;
 
-/**
- *
- * @author brend
- */
+/*
+Crivo de Eratóstenes
+Autor:
+    ChatGPT
+Colaborador:
+    RAIANE STEFANE CAMPOS CORREIA e DIOMENES DE ARAUJO MARANGONI
+Descrição:
+    Dado um número máximo, o Crivo de Eratóstenes encontra todos
+    os números primos de 0 até este número máximo
+*/
 public class CrivoDeEratostenesParalela {
 
     private static final int NUM_THREADS = 6; // Número de threads
